@@ -75,13 +75,13 @@
   &-title {
     margin-bottom: 10px;
     font-size: 48px;
-    font-weight: 700;
+    @include f700;
     line-height: 72px;
   }
   &-text {
     margin-bottom: 55px;
     font-size: 20px;
-    font-weight: 500;
+    @include f500;
     line-height: 30px;
   }
   &-form {
@@ -103,7 +103,7 @@
       // }
       &::placeholder {
         color: #90a4ae;
-        font-weight: 500;
+        @include f500;
       }
     }
     button {
@@ -165,7 +165,7 @@
     padding: 10px 30px;
     align-items: center;
     min-height: 90px;
-    font-weight: 700;
+    @include f700;
     border-bottom: 1px solid #e7ecf2;
   }
   &-name {
@@ -180,13 +180,13 @@
     display: block;
     font-size: 14px;
     color: $green;
-    font-weight: 500;
+    @include f500;
     // margin-top: 8px;
   }
   &-price {
     color: $blue;
     font-size: 20px;
-    font-weight: 700;
+    @include f700;
   }
   &-info {
     display: flex;
@@ -211,7 +211,7 @@
     }
     span {
       font-size: 14px;
-      font-weight: 500;
+      @include f500;
     }
     &-star {
       span {
@@ -247,8 +247,8 @@
       display: inline-block;
       margin-right: 3px;
       margin-left: 4px;
-      &.slick-active{
-        button{
+      &.slick-active {
+        button {
           background-color: $green;
         }
       }
@@ -267,3 +267,77 @@
 }
 
 // end product-slider
+//start advantages
+.advantages {
+  background-color: $blue;
+  padding: 110px 0;
+}
+.advantages__title {
+  color: white;
+}
+.advantages__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  max-width: 370px;
+  text-align: center;
+  padding: 0px 15px;
+
+  &:hover {
+    .advantages__item-img {
+      background-color: $green;
+    }
+    .advantages__item-title {
+      color: $green;
+    }
+    .advantages__item-img{
+      g{
+        fill: white;
+      }
+    }
+  }
+  g{
+    transition: all 0.5s;
+  }
+  &-img {
+    width: 114px;
+    height: 114px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto 30px;
+    transition: all 0.5s;
+    padding-top: 7px;
+  }
+  &-title {
+    margin-bottom: 25px;
+    color: white;
+    @include f500;
+    font-size: 24px;
+    transition: all 0.5s;
+  }
+  &-text {
+    font-size: 15px;
+    color: $bg;
+  }
+}
+.iconsvg-1 {
+  svg {
+    width: 50px;
+  }
+}
+.iconsvg-2 {
+  svg {
+    width: 70px;
+  }
+}
+.iconsvg-3 {
+  svg {
+    width: 86px;
+  }
+}
+//end advantages
