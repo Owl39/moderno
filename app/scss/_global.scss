@@ -58,6 +58,7 @@ body {
   font-size: 15px;
   line-height: 24px;
   color: $text;
+  overflow-x: hidden;
 }
 
 .container {
@@ -76,7 +77,7 @@ body {
   flex: 1 0 auto;
 }
 .page-content {
-  background-color: $grey;
+  background-color: #fff;
 }
 .footer {
   flex: 0 0 auto;
@@ -135,5 +136,17 @@ body {
         }
       }
     }
+  }
+}
+.angle-right {
+  padding-left: 15px;
+  position: relative;
+  &::before {
+    content: "\f105";
+    position: absolute;
+    font-family: "icomoon";
+    color: $green;
+    left: 0;
+    font-size: 14px;
   }
 }
